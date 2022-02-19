@@ -1,0 +1,48 @@
+{% extends 'base.html'%}
+{% block title %}Filter the Engineering college list {% endblock %}
+
+{% block content %}
+<h1><font face = "Noe " ><b>Filter functionality</b></font></h1>
+<hr>
+{% if user.is_authenticated %}
+<form method = "GET" action = "/display">
+{% csrf_token %}
+<!--label for="customRange2" class="form-label">Fees</label>
+<input type="range" class="form-range" min="85000" max="200000" id="FR" name="FR" step ="5000"-->
+<head>Select colleges from the list</head>
+<div class="input-group input-group-sm mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" input ="FR" name="FR">
+
+</div>
+
+<body>
+
+  
+</body>
+<br>
+
+
+</br>
+<div class= "form-group">
+<a class="btn btn-warning" type="submit" href="{% url 'display' %}">View</a>
+</div> 
+{% else %}
+	<p>You need to authenticate yourself by registering and logging in</p>
+{%endif%}
+</form>
+<hr>
+<a href = "{% url 'home' %}"class="btn btn-primary">Back</a>
+{% endblock %}
+
+<!--div>
+ <label for="floatingInput" >Database fundamentals</label>
+  <input type="text" class="form-control" id="input-group-text" name = "regions">
+</div-->
+<!--label for="Fees">Choose a fees range:</label>
+<select id="Fees" name="Fees">
+  <option value="1">Less than 1 Lakh</option>
+  <option value="1.5">Above 1 lakh but less than 1.5 lakhs</option>
+  <option value="2.0">Above 1.5 lakh but less than 2 lakhs</option>
+  <option value="2.5">More than 2 Lakhs</option>
+</select-->

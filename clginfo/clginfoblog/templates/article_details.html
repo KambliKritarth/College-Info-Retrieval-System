@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% block title %}{{ post.title }} {% endblock %}
+
+
+
+
+
+
+{% block content %}
+{% if user.is_authenticated %}
+<h1><font face = "Noe">{{ post.title }}</h1>
+<small>By: {{post.author.first_name }} {{ post.author.last_name }}</small>
+<hr>
+<br/>
+{{ post.body }}
+
+
+
+<br/><br>
+<a href = "{% url 'home' %}"class="btn btn-secondary">Back</a>
+{% else %}
+<div class="alert alert-danger" role="alert">
+                        <p><font face = "Noe" size = 5>You need to authenticate yourself by registering and logging in</p>
+        </div>
+        
+  
+{% endif %}
+
+{% endblock %}

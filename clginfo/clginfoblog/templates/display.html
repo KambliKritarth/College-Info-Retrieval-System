@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+{% block title %}Short listed Computer Engineering college{% endblock %}
+
+{% block content %}
+<div class="container" align="middle">
+<head><font face = "Noe " size = 10><b>College list</b></font></head>
+</div>
+<body>
+<center><h2 style="margin-left:20px;"><font face = "Noe" size = 6>Explore from the variety of the colleges to what suits the best for you!</font></h2>
+<!--form method="get" action="">
+  {% csrf_token %}
+  Search College: <input name="src" type="text" placeholder="Search..." value="">
+</form>
+</center-->
+
+
+
+
+  <table>
+    
+      
+   <tr>
+    <th>CumulativeID</th><th>Course ID</th><th id="name">Name</th><th>Brand</th><th>Price</th><th>     Region </th>
+    </tr>
+    
+ 
+      {% for product in college_list %}
+    {% if product.course_id == 1%}
+    <tr>
+
+       <td>{{product.id}}</td><td>{{product.course_id}}     </td> <td>{{product.clg_name}}</td> <td> {{product.clg_type}}     </td> <td style="text-align:right">Rs  {{product.fees}}</td><td>{{product.region}}</td>
+      
+    </tr>
+    {% endif %}
+    
+
+    {%endfor%}</button>
+    
+
+  </table>
+</center>
+</body>
+{% endblock %}
