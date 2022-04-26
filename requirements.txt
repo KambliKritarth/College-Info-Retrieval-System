@@ -62,7 +62,6 @@ tenacity==8.0.1
 threadpoolctl==2.2.0
 tqdm==4.61.2
 traitlets==5.0.5
-ttkthemes==3.2.2
 typing_extensions==4.0.1
 urllib3==1.26.4
 virtualenv==20.6.0
