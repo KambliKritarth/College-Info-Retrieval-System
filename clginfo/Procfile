@@ -1,1 +1,1 @@
-web:gunicorn clginfo.wsgi
+web: gunicorn clginfo.wsgi
