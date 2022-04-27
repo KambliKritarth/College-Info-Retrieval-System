@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-9$s(47k&s#xox3_%uwsmkz*6e0a^#n1d8dyltl4ni^2@1(ab^q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://collegeinforetrieval.herokuapp.com']
 
 
 # Application definition
